@@ -4,7 +4,6 @@
 using namespace std;
 
 void space_remover(string &s)
-
 {
     int spaceCount = 0;
     int i = 0;
