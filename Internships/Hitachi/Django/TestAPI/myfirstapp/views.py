@@ -14,4 +14,4 @@ def hello_world(request):
 # returning markup using render function
 # automatically looks into the templates folder so no need to manually specify directory
 def etowerinfo(request):
-    return render(request, "etower.html")
+    return render(request, "etower.html", {"name": "Ahan"})
