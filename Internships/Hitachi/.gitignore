@@ -1,6 +1,4 @@
-# *
-# !*/
-# !*.*
+__pycache__/
+*.pyc
 *.exe
 .DS_Store
-temp.cpp
