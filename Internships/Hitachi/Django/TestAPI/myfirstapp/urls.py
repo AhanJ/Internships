@@ -5,4 +5,4 @@ from . import views
 # when myfirstapp/hello endpoint is visited hello_world function is called
 # this needs to be further mapped using urls.py file in the main project folder
 
-urlpatterns = [path("hello/", views.hello_world)]
+urlpatterns = [path("hello/", views.hello_world), path("etowerinfo/", views.etowerinfo)]
