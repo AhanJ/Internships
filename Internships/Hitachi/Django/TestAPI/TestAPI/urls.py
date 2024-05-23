@@ -24,4 +24,5 @@ from django.urls import include
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("myfirstapp/", include("myfirstapp.urls")),
+    path("crudAPI/", include("crudAPI.urls")),
 ]
