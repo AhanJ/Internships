@@ -6,6 +6,5 @@ urlpatterns = [
     path("read/", views.readData),
     path("create/", views.createData),
     path("delete/<int:id>", views.deleteData),
-    path("update/", views.updateData),
-    path("temp/", views.temp),
+    path("update/<int:id>", views.updateData),
 ]
