@@ -79,14 +79,16 @@ WSGI_APPLICATION = "TestAPI.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "testdb",
-        "USER": "postgres",
-        "PASSWORD": "123456",
-        "HOST": "localhost",
-        "PORT": "5432",
+        "NAME": "TestDB",
+        "USER": "TestDB_owner",
+        "PASSWORD": "yC7dnmu4pqPB",
+        "HOST": "ep-delicate-firefly-a1903ah5.ap-southeast-1.aws.neon.tech",
+        "PORT": 5432,
+        "OPTIONS": {
+            "sslmode": "require",
+        },
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
