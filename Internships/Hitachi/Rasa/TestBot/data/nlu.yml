@@ -1,0 +1,81 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: check_weather_time
+    examples: |
+      - What's the situation in [London](location)?
+      - Tell me about [New York](location)
+      - How are things in [Tokyo](location)?
+      - Info about [Paris](location)
+      - Can you give me details for [San Francisco](location)?
+      - I'd like to know about [Los Angeles](location)
+      - How are things in [Berlin](location)?
+      - What's happening in [Toronto](location)?
+      - What's going on in [Rome](location)?
+      - Give me an update on [Sydney](location)
+      - What's new in [London](location)?
+      - Give me information about [New York](location)
+      - Details on [Tokyo](location), please
+      - What's up in [Paris](location)?
+      - Can you tell me what's going on in [San Francisco](location)?
+      - Tell me the latest for [Los Angeles](location)
+      - Any updates for [Berlin](location)?
+      - Current status in [Toronto](location)?
+      - What's the news from [Rome](location)?
+      - What's the latest for [Sydney](location)?
+      - [Sydney](location)
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
