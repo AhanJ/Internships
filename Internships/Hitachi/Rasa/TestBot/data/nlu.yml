@@ -49,29 +49,37 @@ nlu:
       - no way
       - not really
 
-  - intent: check_weather_time
+  - intent: need_weather_time
     examples: |
-      - What's the situation in [London](location)?
-      - Tell me about [New York](location)
-      - How are things in [Tokyo](location)?
-      - Info about [Paris](location)
-      - Can you give me details for [San Francisco](location)?
-      - I'd like to know about [Los Angeles](location)
-      - How are things in [Berlin](location)?
-      - What's happening in [Toronto](location)?
-      - What's going on in [Rome](location)?
-      - Give me an update on [Sydney](location)
-      - What's new in [London](location)?
-      - Give me information about [New York](location)
-      - Details on [Tokyo](location), please
-      - What's up in [Paris](location)?
-      - Can you tell me what's going on in [San Francisco](location)?
-      - Tell me the latest for [Los Angeles](location)
-      - Any updates for [Berlin](location)?
-      - Current status in [Toronto](location)?
-      - What's the news from [Rome](location)?
-      - What's the latest for [Sydney](location)?
-      - [Sydney](location)
+      - [Tokyo](city)
+      - [New Delhi](city)
+      - [Shanghai](city)
+      - [Sao Paulo](city)
+      - [Mexico City](city)
+      - [Cairo](city)
+      - [Mumbai](city)
+      - [Beijing](city)
+      - [Dhaka](city)
+      - [Osaka](city)
+      - [New York City](city)
+      - [Karachi](city)
+      - [Buenos Aires](city)
+      - [Chongqing](city)
+      - [Istanbul](city)
+      - [Kolkata](city)
+      - [Manila](city)
+      - [Lagos](city)
+      - [Rio de Janeiro](city)
+      - [Tianjin](city)
+      - [Kinshasa](city)
+      - [Guangzhou](city)
+      - [Los Angeles](city)
+      - [Moscow](city)
+      - [Shenzhen](city)
+      - [Lahore](city)
+      - [Bangalore](city)
+      - [Paris](city)
+      - [Bogota](city)
 
   - intent: bot_challenge
     examples: |

@@ -5,39 +5,35 @@ intents:
   - goodbye
   - affirm
   - deny
-  - check_weather_time
+  - need_weather_time
   - bot_challenge
 
 entities:
-  - country
   - city
 
 slots:
-  country:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: country
-        intent: check_weather_time
   city:
     type: text
     mappings:
       - type: from_entity
         entity: city
-        intent: check_weather_time
+        intent: need_weather_time
 
 responses:
   utter_greet:
-    - text: "Hey! I am here to provide you with weather and time data of any city."
+    - text: "Hey! I am here to provide you with weather and time data of any of the major cities."
 
   utter_ask:
-    - text: "Please enter your country and city in Country/City format. Ex: <India/New Delhi>"
+    - text: "Please let me know which city you are interested in."
 
   utter_goodbye:
     - text: "Bye"
 
   utter_iamabot:
     - text: "I am a bot, powered by Rasa."
+
+actions:
+  - action_get_weather_time
 
 session_config:
   session_expiration_time: 60
