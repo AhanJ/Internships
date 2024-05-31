@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* 'box-sizing: border-box' changes the box model for all elements. By default, the width and height of an element are calculated as the content's width/height plus padding and border. With box-sizing: border-box, the width and height include the content, padding, and border. This makes it easier to size elements accurately. */
+
+.container {
+    width: 100%; 
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+/* 'width: 100%' sets the width of the container to 100% of its parent element's width.
+'min-height: 100vh' ensures the container has a minimum height of 100% of the viewport height (i.e., the full height of the browser window). */
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+/* width ranges from 100% of parent container width (if less than 540px) to 540px */

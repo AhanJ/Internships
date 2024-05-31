@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "myfirstapp",
     "crudAPI",
     "rest_framework",
+    "TestBot",
 ]
 
 MIDDLEWARE = [

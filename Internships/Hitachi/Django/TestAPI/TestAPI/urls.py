@@ -25,4 +25,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("myfirstapp/", include("myfirstapp.urls")),
     path("crudAPI/", include("crudAPI.urls")),
+    path("TestBot/", include("TestBot.urls")),
 ]

@@ -3,21 +3,6 @@ from rasa_sdk.executor import CollectingDispatcher
 from typing import Any, Text, Dict, List
 import requests
 
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
-
 # dispatcher – the dispatcher which is used to send messages back to the user
 # use dispatcher.utter_message() or any other rasa_sdk.executor.CollectingDispatcher method
 
@@ -65,6 +50,8 @@ class ActionGetWeatherTime(Action):
 
             if hh > 12:
                 am_pm_time = str(hh - 12) + ":" + mm + "pm"
+            elif hh == 12:
+                am_pm_time = str(hh) + ":" + mm + "pm"
             else:
                 am_pm_time = str(hh) + ":" + mm + "am"
 
