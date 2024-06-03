@@ -18,7 +18,7 @@
 'min-height: 100vh' ensures the container has a minimum height of 100% of the viewport height (i.e., the full height of the browser window). */
 
 .todo-app {
-    width: 100%;
+    /* width: 100%; */
     max-width: 540px;
     background: #fff;
     margin: 100px auto 20px;
@@ -26,4 +26,71 @@
     border-radius: 10px;
 }
 
-/* width ranges from 100% of parent container width (if less than 540px) to 540px */
+/* width ranges from 100% of parent container width (if less than 540px) to 540px - helps the browser to handle container without adding scrollbars when resizing browser windows : https://learnlayout.com/max-width
+Note: default width is 100%
+'margin: auto' it instructs the browser to automatically calculate the margins and distribute the available space evenly on both sides of the element */
+
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* align-items: center is used to align flex items (child elements) vertically in the center of the <h2> element.
+Since <h2> elements are typically block-level and don’t usually contain other elements that would be positioned by Flexbox, this might be used if the <h2> has inline elements or icons as children - we will add an image later where this will make more sense */
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+/* justify-content: space-between distributes space between the items, placing the input and button at opposite ends of the .row. */
+
+input {
+    flex: 1;
+    border: none;
+    /* outline: none; */
+    background: transparent;
+    padding: 12px;
+    border-radius: 30px;
+}
+
+/* border: none removes the default border.
+outline: none removes the default outline when the input is focused.
+flex: 1 instructs the item to grow and take up all available space along the main axis of the flex container.
+flex: 1 Allows the input to grow and fill available space in the .row
+The input field inside .row will stretch to fill available space, while the button will stay at the right end, with space distributed evenly between the two elements due to justify-content: space-between. */
+
+button {
+    border: none;
+    outline: none;
+    padding: 12px 48px;
+    background: #ff5945;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 'display: inline' changes the display property of the <h2> elements from their default block-level behavior to inline.
+This allows it to follow document flow.  */
