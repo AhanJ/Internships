@@ -9,18 +9,22 @@
 <body>
     <div class="container">
         <div class="todo-app">
-            <h2>To-Do List</h2>
+            <h2>To-Do List
+                <img src="images/icon.png" alt="to-do list icon">
+            </h2>
             <div class="row">
                 <input type="text" id="input-box" placeholder="Add a Task">
-                <button>Add</button> 
+                <button type="button" onclick="addTask()">Add</button> 
                 <!-- Note: <input> and <button> are inline elements -->
             </div>
             <ul id="list-container">
-                <li>Task 1</li>
+                <!-- <li class="checked">Task 1</li>
                 <li>Task 2</li>
-                <li>Task 3</li1>
+                <li>Task 3</li> -->
             </ul>
         </div>
     </div>
+    <script src="script.js">
+    </script>
 </body>
 </html>

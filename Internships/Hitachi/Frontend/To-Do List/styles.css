@@ -34,7 +34,13 @@ Note: default width is 100%
     color: #002765;
     display: flex;
     align-items: center;
+    /* justify-content: center; */
     margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
 }
 
 /* align-items: center is used to align flex items (child elements) vertically in the center of the <h2> element.
@@ -55,7 +61,7 @@ Since <h2> elements are typically block-level and don’t usually contain other 
 input {
     flex: 1;
     border: none;
-    /* outline: none; */
+    outline: none;
     background: transparent;
     padding: 12px;
     border-radius: 30px;
@@ -78,19 +84,71 @@ button {
     cursor: pointer;
 }
 
+/* to select a html element, the css selector is without a dot and to select a class, we use the dot */
 
+ul li {
+    list-style: none;
+    font-size: 16px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
 
+/* The position: relative; property on the <li> elements means that the <li> elements themselves are positioned according to the normal flow of the document, but they can also be adjusted with top, right, bottom, or left properties if needed
+no additional offset is provided, so the <li> elements remain in their default positions
+setting position: relative; establishes a containing block for any absolutely positioned children (like the ::before pseudo-element) */
 
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
 
+/* ::before pseudo-element is positioned absolutely within the nearest ancestor that has a position other than static (default) (i.e., relative, absolute, or fixed)
+the pseudo-element is being placed relative to the <li> elements because they are set to position: relative
+background-size: cover;: This property ensures that the background image covers the entire area of the pseudo-element, potentially cropping it to fit.
+background-position: center;: This centers the background image within the pseudo-element. */
 
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
 
+ul li.checked::before {
+    /* content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px; */
+    background-image: url(images/checked.png);
+}
 
+/* The commented properties (content, position, height, width, etc.) are redundant in the ul li.checked::before rule because they are already defined in the ul li::before rule.
+When the .checked class is applied, only the background-image property needs to change. The rest of the properties (size, position, etc.) are inherited from the initial ul li::before rule.
+CSS rules cascade and properties defined earlier can be overridden by more specific rules later. Since ul li::before sets up the basic structure and appearance, ul li.checked::before only needs to override the background image.
+The ul li.checked::before rule is more specific because it targets ::before elements within li elements that also have the .checked class */
 
-
-
-
-
-
-
-/* 'display: inline' changes the display property of the <h2> elements from their default block-level behavior to inline.
-This allows it to follow document flow.  */
+ul li::after {
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
