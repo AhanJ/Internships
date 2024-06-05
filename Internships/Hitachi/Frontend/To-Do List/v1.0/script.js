@@ -21,7 +21,7 @@ const addTask = () => {
 listContainer.addEventListener(
   "click",
   function (e) {
-    if (e.target.tagName == "LI::before") {
+    if (e.target.tagName == "LI") {
       e.target.classList.toggle("checked");
     } else if (e.target.tagName == "IMG") {
       e.target.parentElement.remove();
