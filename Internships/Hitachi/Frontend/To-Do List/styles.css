@@ -140,15 +140,27 @@ When the .checked class is applied, only the background-image property needs to 
 CSS rules cascade and properties defined earlier can be overridden by more specific rules later. Since ul li::before sets up the basic structure and appearance, ul li.checked::before only needs to override the background image.
 The ul li.checked::before rule is more specific because it targets ::before elements within li elements that also have the .checked class */
 
-ul li::after {
+/* ul li::after {
     content: '';
     position: absolute;
     height: 24px;
     width: 24px;
     border-radius: 50%;
-    background-image: url(images/unchecked.png);
+    background-image: url(images/cross.png);
     background-size: cover;
     background-position: center;
     top: 10px;
-    left: 8px;
+    right: 8px;
+    cursor: pointer;
+} */
+
+/* use before and after pseudoelements primarily for decorative purposes */
+
+ul li img {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
 }
