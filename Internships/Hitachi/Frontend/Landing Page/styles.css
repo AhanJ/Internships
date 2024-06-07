@@ -85,6 +85,12 @@ Full Width: The width: 100% property ensures that the .header element spans the 
   }
 }
 
+.nav__close {
+  position: absolute;
+  top: 12px;
+  right: 24px;
+}
+
 .nav__link {
   color: black;
   transition: color 0.4s;
@@ -92,10 +98,4 @@ Full Width: The width: 100% property ensures that the .header element spans the 
 
 .nav__link:hover {
   color: red;
-}
-
-.nav__close {
-  position: absolute;
-  top: 12px;
-  right: 24px;
 }
