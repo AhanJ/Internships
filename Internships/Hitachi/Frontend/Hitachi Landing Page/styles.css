@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text: #ffffff;
+  --background: #1a1a1a;
+  --primary: #e60027;
+  --secondary: #ffffff;
+  --accent: #e60027;
+}
+
+/* The :root selector matches the document's root element. In HTML, the root element is always the html element. */
+
+body {
+  font-family: "Roboto Serif";
+  font-weight: 400;
+  background-color: var(--background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Roboto Mono";
+  font-weight: 700;
+  color: var(--text);
+}
+
+html {
+  font-size: 100%;
+} /* 16px */
+
+h1 {
+  font-size: 4.21rem; /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem; /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem; /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem; /* 21.28px */
+}
+
+small {
+  font-size: 0.75rem; /* 12px */
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1440px;
+  margin-inline: 24px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--secondary);
+}
+
+.navbar {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar img {
+  width: 268px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  height: 100%;
+}
+
+.nav-list li {
+  display: flex;
+}
+
+.nav-link {
+  padding: 0.75rem 1.25rem;
+  border-radius: 16px;
+  color: var(--background);
+  transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+  /* color: var(--secondary); */
+  background-color: #e60027;
+}
