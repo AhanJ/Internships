@@ -147,20 +147,6 @@ a {
   height: 56px;
 }
 
-.hero-section {
-  display: flex;
-  padding-bottom: 8rem;
-  align-items: center;
-  min-height: 720px;
-  height: 100vh;
-  background-image: url("assets/lines.png");
-  background-size: cover;
-}
-
-.hero-section p {
-  color: var(--text);
-}
-
 @media screen and (min-width: 1001px) {
   .nav-close,
   .nav-open {
@@ -210,7 +196,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 6rem 0 6rem 0;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
 .card {
