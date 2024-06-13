@@ -192,6 +192,27 @@ a {
   right: 0;
 }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-content {
+  padding-bottom: 8rem;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
 .card-content {
   display: flex;
   align-items: center;
