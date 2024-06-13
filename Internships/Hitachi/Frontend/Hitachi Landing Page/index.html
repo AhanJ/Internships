@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hitachi Systems</title>
+    <title>Hitachi Systems India</title>
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
     <link rel="stylesheet" href="styles.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
@@ -13,7 +14,7 @@
     <header class="header">
       <div class="navbar container">
         <a href="#" class="nav-logo"
-          ><img src="assets/logo.svg" alt="main-logo"
+          ><img src="assets/logo-inverted.png" alt="main-logo"
         /></a>
         <div class="nav-menu" id="nav-menu">
           <ul class="nav-list">
@@ -21,7 +22,7 @@
             <li><a href="#" class="nav-link">Solutions</a></li>
             <li><a href="#" class="nav-link">Services</a></li>
             <li><a href="#" class="nav-link">About Us</a></li>
-            <li><a href="#" class="nav-link">Contact</a></li>
+            <li><a href="#" class="nav-link">Contact Us</a></li>
           </ul>
           <div class="nav-close" id="nav-close">
             <img
@@ -35,16 +36,20 @@
         </div>
       </div>
     </header>
-    <div class="spacer"></div>
+    <!-- <div class="spacer"></div> -->
     <main>
       <div class="hero-content container">
-        <h1>
+        <h1 class="main-heading">
           Digital Transformation: <br />
           We Make it Happen Everyday.
         </h1>
+        <h4 class="main-subheading">
+          Driving digital change through integrated IT solutions and services.
+        </h4>
       </div>
       <video
         class="hero-video"
+        id="bg-video"
         autoplay
         muted
         loop
@@ -53,9 +58,20 @@
       ></video>
     </main>
     <section class="card-content container">
-      <div class="card"><h3>Solutions</h3></div>
-      <div class="card"><h3>Services</h3></div>
+      <div class="card">
+        <h3>Solutions</h3>
+        <h5>Transform your business on the tide of digitization.</h5>
+      </div>
+      <div class="card">
+        <h3>Services</h3>
+        <h5>Next-gen services to co-create business value.</h5>
+      </div>
     </section>
+    <section class="solutions container">
+      <div class="sol-image" id="sol1"></div>
+      <div class="sol-text"></div>
+    </section>
+    <section class="services container"></section>
     <script src="scripts.js"></script>
   </body>
 </html>

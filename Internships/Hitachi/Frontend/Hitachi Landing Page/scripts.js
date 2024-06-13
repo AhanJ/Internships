@@ -17,3 +17,6 @@ if (navClose) {
     navMenu.classList.remove("show-menu");
   });
 }
+
+const bgVideo = document.getElementById("bg-video");
+bgVideo.playbackRate = 2;

@@ -77,7 +77,7 @@ a {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: var(--secondary);
+  /* background-color: var(--secondary); */
 }
 
 .navbar {
@@ -94,7 +94,7 @@ a {
 }
 
 .navbar img {
-  width: 268px;
+  width: 288px;
 }
 
 .nav-menu {
@@ -113,13 +113,16 @@ a {
 .nav-list li {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .nav-link {
-  padding: 0.75rem 1.25rem;
+  padding-inline: 1rem;
   border-radius: 24px;
-  color: var(--background);
+  color: var(--text);
   transition: background-color 0.2s;
+  font-family: "Roboto Mono";
+  font-weight: 500;
 }
 
 .nav-link:hover {
@@ -168,7 +171,7 @@ a {
     right: -100%;
     width: 80%;
     height: 100%;
-    background-color: var(--secondary);
+    background-color: var(--background);
     padding: 6rem 3rem;
     transition: right 0.25s;
   }
@@ -177,7 +180,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 0.75rem;
+    row-gap: 2.5rem;
     height: 100%;
   }
 
@@ -196,21 +199,34 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  flex-direction: column;
+  min-height: 100vh;
   position: relative;
+  overflow: hidden;
+  z-index: -1;
 }
 
 .hero-content {
   padding-bottom: 8rem;
+  z-index: 0;
+  color: var(--text);
+  max-width: 64rem;
+}
+
+.main-subheading {
+  font-family: "Roboto Serif";
+  font-weight: 100;
+  margin-top: 2rem;
 }
 
 .hero-video {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  min-width: 100%;
   z-index: -1;
-  overflow: hidden;
 }
 
 .card-content {
@@ -219,13 +235,29 @@ main {
   justify-content: space-evenly;
   padding-top: 8rem;
   padding-bottom: 8rem;
+  column-gap: 3rem;
 }
 
 .card {
   display: flex;
-  justify-content: center;
-  padding: 6rem 0rem;
-  width: 40%;
-  background-color: #b1000e;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 16rem;
+  width: 60%;
+  min-width: 30%;
+  background-color: var(--primary);
   border-radius: 1.5rem;
+  padding: 2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.card h5 {
+  font-family: "Roboto Serif";
+  font-weight: 100;
+}
+
+.sol-image sol1 {
+  background-image: url(assets/content/solutions/01.png);
+  background-size: cover;
 }
