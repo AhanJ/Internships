@@ -258,8 +258,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  /* padding-top: 8rem;
-  padding-bottom: 8rem; */
   column-gap: 3rem;
   margin-bottom: 8rem;
 }
@@ -282,7 +280,6 @@ main {
 
 .alt {
   background-image: url("assets/background/card-bg-flipped.jpg");
-  background-size: cover;
 }
 
 .card h5 {
