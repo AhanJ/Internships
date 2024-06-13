@@ -17,7 +17,7 @@
 body {
   font-family: "Roboto Serif";
   font-weight: 400;
-  background-color: var(--background);
+  background-color: #0d0d0d;
 }
 
 h1,
@@ -74,10 +74,17 @@ a {
 
 .header {
   position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  /* background-color: var(--secondary); */
+  width: 80%;
+  top: 0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  /* From https://css.glass */
+  background: rgba(26, 26, 26, 0.67);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.9px);
+  -webkit-backdrop-filter: blur(10.9px);
+  border-radius: 2rem;
 }
 
 .navbar {
@@ -106,7 +113,7 @@ a {
 .nav-list {
   display: flex;
   align-items: center;
-  column-gap: 0.75rem;
+  column-gap: 2.5rem;
   height: 100%;
 }
 
@@ -117,17 +124,20 @@ a {
 }
 
 .nav-link {
-  padding-inline: 1rem;
-  border-radius: 24px;
+  /* padding-inline: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; */
+  /* border-radius: 24px; */
   color: var(--text);
-  transition: background-color 0.2s;
+  transition: text-decoration 0.2s;
   font-family: "Roboto Mono";
   font-weight: 500;
 }
 
 .nav-link:hover {
-  background-color: var(--primary);
-  color: var(--text);
+  text-decoration: underline;
+  /* background-color: var(--primary);
+  color: var(--text); */
 }
 
 .nav-close img,
@@ -158,6 +168,12 @@ a {
 }
 
 @media screen and (max-width: 1000px) {
+  .header {
+    width: 100%;
+    top: 0;
+    border-radius: 0;
+  }
+
   .container {
     margin-inline: 1.5rem;
   }
@@ -170,8 +186,13 @@ a {
     top: 0;
     right: -100%;
     width: 80%;
-    height: 100%;
-    background-color: var(--background);
+    height: 100vh;
+    /* From https://css.glass */
+    background: rgba(26, 26, 26, 0.995);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     padding: 6rem 3rem;
     transition: right 0.25s;
   }
@@ -179,9 +200,13 @@ a {
   .nav-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     row-gap: 2.5rem;
     height: 100%;
+  }
+
+  .nav-link {
+    padding-inline: 0;
   }
 
   .nav-close {
@@ -203,20 +228,20 @@ main {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  z-index: -1;
+  margin-bottom: 8rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.5rem var(--accent);
 }
 
 .hero-content {
-  padding-bottom: 8rem;
-  z-index: 0;
   color: var(--text);
   max-width: 64rem;
 }
 
 .main-subheading {
-  font-family: "Roboto Serif";
+  font-family: "Roboto Mono";
   font-weight: 100;
-  margin-top: 2rem;
+  margin-top: 1.75rem;
 }
 
 .hero-video {
@@ -233,9 +258,10 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  /* padding-top: 8rem;
+  padding-bottom: 8rem; */
   column-gap: 3rem;
+  margin-bottom: 8rem;
 }
 
 .card {
@@ -245,19 +271,62 @@ main {
   min-height: 16rem;
   width: 60%;
   min-width: 30%;
-  background-color: var(--primary);
+  background-image: url("assets/background/card-bg.jpg");
+  background-size: cover;
   border-radius: 1.5rem;
   padding: 2rem;
   position: relative;
   cursor: pointer;
+  box-shadow: 0 0 0.75rem var(--accent);
+}
+
+.alt {
+  background-image: url("assets/background/card-bg-flipped.jpg");
+  background-size: cover;
 }
 
 .card h5 {
-  font-family: "Roboto Serif";
-  font-weight: 100;
+  font-family: "Roboto Mono";
+  font-weight: lighter;
 }
 
-.sol-image sol1 {
-  background-image: url(assets/content/solutions/01.png);
-  background-size: cover;
+.solutions,
+.services {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.75rem;
+  margin-bottom: 8rem;
+}
+
+.solution-row,
+.services-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  column-gap: 2rem;
+}
+
+.mini-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 2rem;
+  background-color: var(--accent);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 0 0.75rem var(--accent);
+  min-height: 24rem;
+  /* background-image: url(assets/background/lines.png);
+  background-size: cover; */
+}
+
+.mini-card h4 {
+  text-align: center;
+}
+
+.mini-card img {
+  height: 80%;
+  width: 80%;
+  object-fit: contain;
 }
