@@ -74,7 +74,8 @@ a {
 
 .header {
   position: fixed;
-  width: 85%;
+  width: 80%;
+  max-width: 1200px;
   top: 0.25rem;
   left: 50%;
   transform: translateX(-50%);
