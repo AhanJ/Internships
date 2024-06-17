@@ -63,8 +63,8 @@ small {
   flex-direction: column;
   justify-content: center;
   position: fixed;
-  bottom: 8rem;
-  right: 8rem;
+  bottom: 6rem;
+  right: 6rem;
   width: 20rem;
   height: 30rem;
   background: rgba(26, 26, 26, 0.6);
@@ -74,6 +74,13 @@ small {
   border-radius: 1.25rem;
   overflow: hidden;
   padding-bottom: 0.4rem;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.chatbot-frame.hide-bot {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .chatbot-header {
@@ -88,8 +95,8 @@ small {
 .chatbot-chat {
   height: 80%;
   padding: 1rem;
-  /* overflow: scroll; */
-  /* overflow-x: hidden; */
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .chat {
@@ -98,13 +105,13 @@ small {
   margin-bottom: 0.75rem;
 }
 
-.incoming {
+.outgoing {
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
 }
 
-.outgoing {
+.incoming {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -114,12 +121,12 @@ small {
   padding: 0.25rem 0.75rem;
 }
 
-.incoming p {
+.outgoing p {
   background-color: var(--secondary);
   border-radius: 1.25rem 1.25rem 1.25rem 0;
 }
 
-.outgoing p {
+.incoming p {
   background-color: var(--accent);
   border-radius: 1.25rem 1.25rem 0 1.25rem;
 }
@@ -148,7 +155,33 @@ small {
   justify-content: center;
   height: 2.25rem;
   width: 2.25rem;
-  background-color: var(--accent);
+  background-color: #d7d9d7;
   border-radius: 50%;
+  border: none;
+}
+
+.send-text.enabled {
+  background-color: var(--accent);
   cursor: pointer;
+}
+
+.toggle-bot {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--accent);
+  padding: 1.25rem;
+  cursor: pointer;
+}
+
+.toggle-bot:hover {
+  box-shadow: 0 0 0.75rem var(--accent);
+}
+
+.toggle-bot {
+  outline: 0;
 }
