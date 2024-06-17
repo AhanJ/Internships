@@ -12,18 +12,68 @@
   --accent: #b1000e;
 }
 
+body {
+  background-image: url(assets/card-bg-flipped.jpg);
+  background-size: cover;
+  font-family: "Roboto Serif";
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Roboto Mono";
+  font-weight: 700;
+  color: var(--text);
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+} /* 16px */
+
+h1 {
+  font-size: 4.21rem; /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem; /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem; /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem; /* 21.28px */
+}
+
+small {
+  font-size: 0.75rem; /* 12px */
+}
+
 .chatbot-frame {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: fixed;
-  bottom: 5rem;
+  bottom: 8rem;
   right: 8rem;
   width: 20rem;
   height: 30rem;
-  background-color: antiquewhite;
+  background: rgba(26, 26, 26, 0.6);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
   border-radius: 1.25rem;
   overflow: hidden;
+  padding-bottom: 0.4rem;
 }
 
 .chatbot-header {
@@ -51,6 +101,7 @@
 .incoming {
   display: flex;
   align-items: center;
+  column-gap: 0.5rem;
 }
 
 .outgoing {
@@ -78,7 +129,6 @@
   justify-content: space-evenly;
   align-items: center;
   height: 10%;
-  background-color: #f2f2f2;
 }
 
 .user-input {
@@ -88,7 +138,8 @@
   border-radius: 1.25rem;
   border: none;
   outline: none;
-  padding: 0.5rem 0 0.5rem 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: #d7d9d7;
 }
 
 .send-text {
