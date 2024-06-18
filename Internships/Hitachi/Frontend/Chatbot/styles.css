@@ -74,13 +74,14 @@ small {
   border-radius: 1.25rem;
   overflow: hidden;
   padding-bottom: 0.4rem;
-  opacity: 1;
   transition: opacity 0.4s;
-}
-
-.chatbot-frame.hide-bot {
   visibility: hidden;
   opacity: 0;
+}
+
+.chatbot-frame.show-bot {
+  visibility: visible;
+  opacity: 1;
 }
 
 .chatbot-header {
@@ -95,8 +96,8 @@ small {
 .chatbot-chat {
   height: 80%;
   padding: 1rem;
-  overflow: scroll;
-  overflow-x: hidden;
+  /* overflow: scroll; */
+  /* overflow-x: hidden; */
 }
 
 .chat {
@@ -163,6 +164,10 @@ small {
 .send-text.enabled {
   background-color: var(--accent);
   cursor: pointer;
+}
+
+.send-text.enabled:hover {
+  box-shadow: 0 0 0.75rem var(--accent);
 }
 
 .toggle-bot {
