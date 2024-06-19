@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/TestAPI
+    ports:
+      - "8000:8000"
+    image: app:TestAPI
+    container_name: TestAPI

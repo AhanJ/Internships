@@ -129,6 +129,7 @@ small {
 
 .incoming p {
   background-color: var(--accent);
+  color: var(--secondary);
   border-radius: 1.25rem 1.25rem 0 1.25rem;
 }
 
@@ -137,6 +138,7 @@ small {
   justify-content: space-evenly;
   align-items: center;
   height: 10%;
+  padding-inline: 0.25rem;
 }
 
 .user-input {
@@ -164,6 +166,7 @@ small {
 .send-text.enabled {
   background-color: var(--accent);
   cursor: pointer;
+  transition: box-shadow 0.25s ease-in-out;
 }
 
 .send-text.enabled:hover {
@@ -181,6 +184,7 @@ small {
   background-color: var(--accent);
   padding: 1.25rem;
   cursor: pointer;
+  transition: box-shadow 0.25s ease-in-out;
 }
 
 .toggle-bot:hover {
