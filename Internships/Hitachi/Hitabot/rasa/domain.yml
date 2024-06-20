@@ -11,16 +11,6 @@ intents:
   - company_partners
   - company_info_solutions
   - company_info_services
-  - digital_workplace_solutions
-  - security_solutions
-  - automation_orchestration_solutions
-  - cloud_data_centre_solutions
-  - infrastructure_managed_services
-  - data_center_services
-  - managed_security_services
-  - cloud_services
-  - device_as_a_service
-  - aws_service_information
 
 responses:
   utter_greet:
@@ -38,47 +28,47 @@ responses:
     - text: "Hitachi Systems India leads digital transformation with integrated IT solutions for businesses. We cater to enterprises of all sizes across diverse industries with our multi-technology expertise."
     - text: "At Hitachi Systems India, we're dedicated to helping businesses thrive in the digital age. Our goal is to make businesses more agile in response to evolving technology landscapes."
 
-  utter_company_clients:
+  # utter_company_clients:
 
-  utter_company_partners:
+  # utter_company_partners:
 
-  utter_company_info_solutions:
+  # utter_company_info_solutions:
 
-  utter_company_info_services:
+  # utter_company_info_services:
 
-  utter_digital_workplace_solutions:
+  utter_company_info_solutions/digital_workplace_solutions:
     - text: "Hitachi's Digital Workplace Solutions optimize workplace productivity for enhanced marketplace performance. We offer comprehensive technology and infrastructure support to meet modern workplace demands."
     - text: "Connect, communicate, and collaborate seamlessly with Hitachi's solutions, anytime and anywhere. Let us handle your workplace transformation, so you can focus on your core business."
 
-  utter_security_solutions:
+  utter_company_info_solutions/security_solutions:
     - text: "Hitachi's security solutions provide a secure foundation to protect against malicious attacks and suspicious behavior."
     - text: "We believe in the enabling power of security across all industries. Our goal is to secure your critical data assets so you can focus on your business priorities."
 
-  utter_automation_orchestration_solutions:
+  utter_company_info_solutions/automation_orchestration_solutions:
     - text: "Automation is key to successful digital transformation, spanning infrastructure, data, and applications. Our solutions are designed with built-in automation to enhance agility, efficiency, and security."
     - text: "Whether you're an administrator, developer, or manager, automation frees you from manual tasks. Count on us to make your operations more agile, efficient, and secure through automation."
 
-  utter_cloud_data_centre_solutions:
+  utter_company_info_solutions/cloud_data_centre_solutions:
     - text: "Hitachi Systems India excels in delivering services that adapt to rapid business growth. Our unique methodology transforms projects, enhancing resilience and continuity in IT operations."
     - text: "Count on us for high-performance, agile infrastructure to meet new demands. We help businesses create value and achieve successful SLA operations for IT-enabled systems."
 
-  utter_infrastructure_managed_services:
+  utter_company_info_services/infrastructure_managed_services:
     - text: "Hitachi Managed Services empower organizations in the era of digital disruption. We offer agility, innovation, and cost-effective operations in a complex IT environment."
 
-  utter_data_center_services:
+  utter_company_info_services/data_center_services:
     - text: "Hitachi Systems India offers end-to-end data center capabilities to meet 24/7 demands. From design and build to optimization and modernization, we ensure cost-effective and future-proof solutions for your critical IT assets."
 
-  utter_managed_security_services:
+  utter_company_info_services/managed_security_services:
     - text: "Hitachi's Managed Security Services offer cybersecurity peace of mind in an era of frequent data breaches. Our end-to-end security solutions combine consulting, design, products, and services for a highly secure infrastructure."
 
-  utter_cloud_services:
+  utter_company_info_services/cloud_services:
     - text: "Leverage cloud for agility, flexibility, and speed to innovate and grow your business."
     - text: "We help unlock new opportunities and create richer customer experiences through cloud strategies. Hitachi Systems India is empowering global enterprises to embrace cloud technology for digital transformation."
 
-  utter_device_as_a_service:
+  utter_company_info_services/device_as_a_service:
     - text: "Hitachi's Device as a Service portfolio enhances organizational efficiency and end-user productivity by managing every phase of the device life cycle, from start to finish."
 
-  utter_aws_service_information:
+  # utter_company_info_services/utter_aws_service_information:
 
 session_config:
   session_expiration_time: 60

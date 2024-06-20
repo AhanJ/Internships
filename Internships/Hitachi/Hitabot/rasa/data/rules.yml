@@ -1,13 +1,27 @@
 version: "3.1"
 
 rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - rule: Describe hitachi
+    steps:
+      - intent: company_info
+      - action: utter_company_info
+
+  - rule: Explain solutions
+    steps:
+      - intent: company_info_solutions
+      - action: utter_company_info_solutions
+
+  - rule: Explain services
+    steps:
+      - intent: company_info_services
+      - action: utter_company_info_services
