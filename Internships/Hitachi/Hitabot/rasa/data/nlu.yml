@@ -1,91 +1,183 @@
-version: "3.1"
+version: 3.1
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: company_info
+    examples: |
+      - tell me about Hitachi Systems India
+      - what does Hitachi Systems do?
+      - give me an overview of your company
+      - how can you help me?
+      - what do you offer
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: company_clients
+    examples: |
+      - Who are your major clients?
+      - Can you list some of the clients you work with?
+      - Tell me about your top clients.
+      - Which companies use your services?
+      - Who are your key customers?
+      - Can you share some of your clients?
+      - I'd like to know about the businesses you serve.
+      - Who are your prominent clients?
+      - Do you have any well-known clients?
+      - Can you provide examples of companies that are your clients?
+      - What clients do you have?
+
+  - intent: company_partners
+    examples: |
+      - Who are your partners?
+      - Who are your major partners?
+      - Can you list some of the partners you collaborate with?
+      - Tell me about your top partners.
+      - Which companies are your partners?
+      - Who are your key partners?
+      - Can you share some of your partners?
+      - I'd like to know about the businesses you partner with.
+      - Who are your prominent partners?
+      - Do you have any well-known partners?
+      - Can you provide examples of companies that are your partners?
+
+  - intent: company_info_solutions
+    examples: |
+      - give me details about your IT solutions
+      - give me details about your solutions
+      - what solutions do you offer?
+      - solutions
+      - solutions offered
+
+  - intent: company_info_services
+    examples: |
+      - give me details about your IT services
+      - give me details about your services
+      - what services do you offer?
+      - what are the services you have?
+      - services offered
+      - services
+
+  - intent: digital_workplace_solutions
+    examples: |
+      - Tell me about your digital workplace solutions.
+      - What are the end user computing solutions you offer?
+      - Explain your digital workplace services.
+
+  - intent: security_solutions
+    examples: |
+      - What security solutions do you provide?
+      - Tell me about your endpoint and server security solutions.
+      - What is perimeter protection?
+      - Explain your data security solutions.
+      - Do you have advanced security solutions?
+
+  - intent: automation_orchestration_solutions
+    examples: |
+      - What automation and orchestration solutions do you offer?
+      - Tell me about your business service management solutions.
+      - What cloud and automation management services do you provide?
+      - Explain your service portfolio management.
+
+  - intent: cloud_data_centre_solutions
+    examples: |
+      - What cloud and data centre solutions do you offer?
+      - Tell me about your data centre solutions.
+      - Explain your cloud services.
+
+  - intent: infrastructure_managed_services
+    examples: |
+      - What infrastructure managed services do you provide?
+      - Tell me about your IT infrastructure management.
+      - What audit and intelligence services do you offer?
+      - Explain your bot services.
+
+  - intent: data_center_services
+    examples: |
+      - What data center services do you offer?
+      - Tell me about your data center consulting.
+      - What is software defined datacentre?
+      - Explain your professional services for data centers.
+
+  - intent: managed_security_services
+    examples: |
+      - What managed security services do you provide?
+      - Tell me about your cyber security services.
+      - What are managed SOC services?
+
+  - intent: cloud_services
+    examples: |
+      - What cloud services do you offer?
+      - Tell me about your cloud advisory and assessment services.
+      - What cloud migration and implementation services do you provide?
+      - Explain your managed cloud services for AWS and Azure.
+
+  - intent: device_as_a_service
+    examples: |
+      - What is device as a service?
+      - Tell me about your end to end lifecycle services for devices.
+
+  - intent: aws_service_information
+    examples:
+      - Can you provide more details about your AWS services?
+      - I'd like to know more about AWS offerings, could you explain?
+      - What are the benefits of using AWS services?
+      - Tell me about AWS and its features.
+      - Explain the services offered by AWS.
+      - Can you provide an overview of AWS services and their capabilities?
+      - What services does AWS offer in terms of machine learning?
+      - Tell me about AWS security services.
+      - Explain how AWS helps in managing resources.
+      - aws services
+      - amazon web services
