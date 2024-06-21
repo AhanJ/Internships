@@ -8,7 +8,7 @@ intents:
   - bot_challenge
   - company_info
   - company_clients
-  - company_partners
+  # - company_partners
   - company_info_solutions
   - company_info_services
 
@@ -28,9 +28,11 @@ responses:
     - text: "Hitachi Systems India leads digital transformation with integrated IT solutions for businesses. We cater to enterprises of all sizes across diverse industries with our multi-technology expertise."
     - text: "At Hitachi Systems India, we're dedicated to helping businesses thrive in the digital age. Our goal is to make businesses more agile in response to evolving technology landscapes."
 
-  # utter_company_clients:
-
-  # utter_company_partners:
+  utter_company_clients:
+    - text: "We proudly serve clients across diverse industries, including TATA Power in Power & Utility, Fino Payments Bank in Finance, BAG Films in Media & Entertainment, AU Small Finance Bank in Banking, JK Tyre in Travel, Transformation & Logistics, and Hitachi India in R&D."
+    - text: "Our esteemed clients span various sectors: TATA Power in Power & Utility, Fino Payments Bank in Finance, BAG Films in Media & Entertainment, AU Small Finance Bank in Banking, JK Tyre in Travel, Transformation & Logistics, and Hitachi India in R&D and many more."
+    - text: "We collaborate with leading companies across different industries such as TATA Power in Power & Utility, Fino Payments Bank in Finance, BAG Films in Media & Entertainment, AU Small Finance Bank in Banking, JK Tyre in Travel, Transformation & Logistics, and Hitachi India in R&D."
+    - text: "Hitachi Systems India is trusted by top companies in multiple sectors, including TATA Power in Power & Utility, Fino Payments Bank in Finance, BAG Films in Media & Entertainment, AU Small Finance Bank in Banking, JK Tyre in Travel, Transformation & Logistics, and Hitachi India in R&D."
 
   # utter_company_info_solutions:
 

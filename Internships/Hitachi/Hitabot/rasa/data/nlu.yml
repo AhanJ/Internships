@@ -78,19 +78,19 @@ nlu:
       - Can you provide examples of companies that are your clients?
       - What clients do you have?
 
-  - intent: company_partners
-    examples: |
-      - Who are your partners?
-      - Who are your major partners?
-      - Can you list some of the partners you collaborate with?
-      - Tell me about your top partners.
-      - Which companies are your partners?
-      - Who are your key partners?
-      - Can you share some of your partners?
-      - I'd like to know about the businesses you partner with.
-      - Who are your prominent partners?
-      - Do you have any well-known partners?
-      - Can you provide examples of companies that are your partners?
+  # - intent: company_partners
+  #   examples: |
+  #     - Who are your partners?
+  #     - Who are your major partners?
+  #     - Can you list some of the partners you collaborate with?
+  #     - Tell me about your top partners.
+  #     - Which companies are your partners?
+  #     - Who are your key partners?
+  #     - Can you share some of your partners?
+  #     - I'd like to know about the businesses you partner with.
+  #     - Who are your prominent partners?
+  #     - Do you have any well-known partners?
+  #     - Can you provide examples of companies that are your partners?
 
   - intent: company_info_solutions
     examples: |

@@ -11,10 +11,15 @@ rules:
       - intent: bot_challenge
       - action: utter_iamabot
 
-  - rule: Describe hitachi
+  - rule: Describe Hitachi
     steps:
       - intent: company_info
       - action: utter_company_info
+
+  - rule: Describe clients
+    steps:
+      - intent: company_clients
+      - action: utter_company_clients
 
   - rule: Explain solutions
     steps:
