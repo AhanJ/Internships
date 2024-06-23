@@ -168,16 +168,16 @@ nlu:
       - What is device as a service?
       - Tell me about your end to end lifecycle services for devices.
 
-  - intent: company_info_services/aws_service_information
-    examples: |
-      - Can you provide more details about your AWS services?
-      - I'd like to know more about AWS offerings, could you explain?
-      - What are the benefits of using AWS services?
-      - Tell me about AWS and its features.
-      - Explain the services offered by AWS.
-      - Can you provide an overview of AWS services and their capabilities?
-      - What services does AWS offer in terms of machine learning?
-      - Tell me about AWS security services.
-      - Explain how AWS helps in managing resources.
-      - aws services
-      - amazon web services
+  # - intent: company_info_services/aws_service_information
+  #   examples: |
+  #     - Can you provide more details about your AWS services?
+  #     - I'd like to know more about AWS offerings, could you explain?
+  #     - What are the benefits of using AWS services?
+  #     - Tell me about AWS and its features.
+  #     - Explain the services offered by AWS.
+  #     - Can you provide an overview of AWS services and their capabilities?
+  #     - What services does AWS offer in terms of machine learning?
+  #     - Tell me about AWS security services.
+  #     - Explain how AWS helps in managing resources.
+  #     - aws services
+  #     - amazon web services

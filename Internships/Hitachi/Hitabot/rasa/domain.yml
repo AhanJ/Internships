@@ -24,9 +24,29 @@ responses:
 
   utter_company_info:
     - text: "At Hitachi Systems India, we use technology to fuel business growth and enhance social infrastructure for a better Quality of Life. With decades of experience in operational technology and information technology, Hitachi is a pioneer in developing advanced solutions."
+      buttons:
+        - title: "Solutions"
+          payload: "/company_info_solutions"
+        - title: "Services"
+          payload: "/company_info_services"
     - text: "Our expertise spans across various industries and business functions, allowing us to collaborate with customers and partners to co-create innovative solutions. Whether it's Operational Technology, Information Technology, or Products, we're here to help transform your business and shape your future."
+      buttons:
+        - title: "Solutions"
+          payload: "/company_info_solutions"
+        - title: "Services"
+          payload: "/company_info_services"
     - text: "Hitachi Systems India leads digital transformation with integrated IT solutions for businesses. We cater to enterprises of all sizes across diverse industries with our multi-technology expertise."
+      buttons:
+        - title: "Solutions"
+          payload: "/company_info_solutions"
+        - title: "Services"
+          payload: "/company_info_services"
     - text: "At Hitachi Systems India, we're dedicated to helping businesses thrive in the digital age. Our goal is to make businesses more agile in response to evolving technology landscapes."
+      buttons:
+        - title: "Solutions"
+          payload: "/company_info_solutions"
+        - title: "Services"
+          payload: "/company_info_services"
 
   utter_company_clients:
     - text: "We proudly serve clients across diverse industries, including TATA Power in Power & Utility, Fino Payments Bank in Finance, BAG Films in Media & Entertainment, AU Small Finance Bank in Banking, JK Tyre in Travel, Transformation & Logistics, and Hitachi India in R&D."
