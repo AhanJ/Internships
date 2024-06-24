@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="chatbot-frame" id="chatbot-frame">
+      <div class="chatbot-header"><h5>Chatbot</h5></div>
+      <div class="chatbot-chat">
+        <ul class="chatbox" id="chatbox">
+          <li class="chat outgoing">
+            <!-- <img src="assets/icons/robot-3-fill.png" alt="bot-icon" /> -->
+            <p>Hello there, how may I assist you today?</p>
+          </li>
+        </ul>
+      </div>
+      <div class="chatbot-input">
+        <textarea
+          class="user-input"
+          name="user-input"
+          id="user-input"
+          autofocus
+          placeholder="Type your message..."
+        ></textarea>
+        <!-- <div class="send-text" id="send-text">
+          <img src="assets/icons/arrow-up-line.png" alt="send-icon" />
+        </div> -->
+        <button class="send-text" id="send-text" disabled>
+          <img src="assets/icons/arrow-up-line.png" alt="send-icon" />
+        </button>
+      </div>
+    </div>
+    <div class="toggle-bot" id="toggle-bot">
+      <img src="assets/icons/chat-4-fill.png" alt="open chatbot" />
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
