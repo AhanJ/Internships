@@ -26,6 +26,16 @@ rules:
       - intent: company_clients
       - action: utter_company_clients
 
+  - rule: Describe solutions and services
+    steps:
+      - intent: company_info_overview
+      - action: utter_company_info_overview
+
+  - rule: Describe aws services
+    steps:
+      - intent: aws_services_overview
+      - action: utter_aws_services_overview
+
   - rule: Explain solutions
     steps:
       - intent: company_info_solutions
@@ -35,3 +45,13 @@ rules:
     steps:
       - intent: company_info_services
       - action: utter_company_info_services
+
+  - rule: Explain AWS services
+    steps:
+      - intent: aws_services
+      - action: utter_aws_services
+
+  - rule: Explain government practice
+    steps:
+      - intent: govt_practice
+      - action: utter_govt_practice
