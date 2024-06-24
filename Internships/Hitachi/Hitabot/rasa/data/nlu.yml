@@ -78,7 +78,7 @@ nlu:
       - Can you provide examples of companies that are your clients?
       - What clients do you have?
 
-  - intent: company_info_overview
+  - intent: company_overview
     examples: |
       - give me details about your IT solutions
       - give me details about your solutions
@@ -150,7 +150,7 @@ nlu:
       - What is device as a service?
       - Tell me about your end to end lifecycle services for devices.
 
-  - intent: - aws_services_overview
+  - intent: aws_overview
     examples: |
       - Can you provide more details about your AWS services?
       - I'd like to know more about AWS offerings, could you explain?
@@ -240,7 +240,7 @@ nlu:
       - Architected Review services
       - Architected Review
 
-  - intent: aws_services/security_solutions
+  - intent: aws_services/aws_security_solutions
     examples: |
       - Can you explain the range of aws security solutions offered by your service?
       - How do your aws security solutions integrate with existing systems and workflows?
@@ -309,3 +309,19 @@ nlu:
       - What expertise does your team have in government contracts?
       - Do you have specific solutions tailored for government needs?
       - Can you explain how your technology supports government operations?
+
+  - intent: contact_us
+    examples: |
+      - How can I get in touch with your support team?
+      - What is the best way to contact you for more information?
+      - Can you provide your contact details for further inquiries?
+      - How do I reach customer service?
+      - Who should I contact for technical support?
+      - contact info
+      - get in touch
+      - email
+      - phone
+      - address
+      - customer support
+      - customer service
+      - support

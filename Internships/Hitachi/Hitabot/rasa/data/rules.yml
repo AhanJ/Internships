@@ -28,13 +28,13 @@ rules:
 
   - rule: Describe solutions and services
     steps:
-      - intent: company_info_overview
-      - action: utter_company_info_overview
+      - intent: company_overview
+      - action: utter_company_overview
 
   - rule: Describe aws services
     steps:
-      - intent: aws_services_overview
-      - action: utter_aws_services_overview
+      - intent: aws_overview
+      - action: utter_aws_overview
 
   - rule: Explain solutions
     steps:
@@ -55,3 +55,8 @@ rules:
     steps:
       - intent: govt_practice
       - action: utter_govt_practice
+
+  - rule: Contact Us
+    steps:
+      - intent: contact_us
+      - action: utter_contact_us
