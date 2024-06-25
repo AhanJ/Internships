@@ -8,15 +8,15 @@
   --text: #ffffff;
   --background: #1a1a1a;
   --primary: #b1000e;
-  --secondary: #f2f2f2;
+  --secondary: #3e4043;
   --accent: #b1000e;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  background-image: url(assets/card-bg-flipped.jpg);
-  background-size: cover;
+  background-image: url(assets/animations/typing-indicator.gif);
+  background-size: auto;
 }
 
 h1,
@@ -24,7 +24,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Roboto Mono";
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: var(--text);
 }
@@ -67,16 +67,15 @@ small {
   right: 6rem;
   width: 23rem;
   height: 37rem;
-  background: rgba(167, 167, 167, 0.82);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.6px);
-  -webkit-backdrop-filter: blur(5.6px);
   border-radius: 1.25rem;
   overflow: hidden;
-  padding-bottom: 0.4rem;
-  transition: opacity 0.4s;
-  visibility: visible;
-  opacity: 1;
+  transition: opacity 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(26, 26, 26, 0.75);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .chatbot-frame.show-bot {
@@ -88,21 +87,36 @@ small {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 10%;
+  flex-direction: column;
+  height: 12%;
   background-color: var(--accent);
   border-radius: 1.25rem 1.25rem 0 0;
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.4);
 }
 
+.online-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.online-icon img {
+  width: 1rem;
+}
+
+.chatbot-header p {
+  font-size: small;
+  color: var(--text);
+}
+
 .chatbot-chat {
-  height: 80%;
+  height: 78%;
   padding: 1.5rem;
   overflow-y: auto;
-  /* scrollbar-gutter: stable both-edges; */
   scrollbar-color: gray transparent;
 }
 
-.sender {
+.sender-info {
   display: flex;
   align-items: center;
   font-size: 0.75rem;
@@ -111,23 +125,27 @@ small {
   font-weight: bold;
 }
 
+.sender-info p {
+  color: var(--text);
+}
+
 .bot-icon {
-  background-image: url(assets/icons/robot-3-fill.png);
-  width: 1.15rem;
-  height: 1.15rem;
-  background-size: 0.8rem;
+  background-image: url(assets/icons/robot.png);
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: 1.4rem;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #b1000e;
+  background-color: var(--accent);
   border-radius: 50%;
 }
 
-.sender.bot {
+.sender-info.bot {
   justify-content: start;
   padding-left: 0.5rem;
 }
 
-.sender.user {
+.sender-info.user {
   justify-content: end;
   padding-right: 0.5rem;
 }
@@ -135,7 +153,7 @@ small {
 .message {
   display: flex;
   align-items: center;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.4rem;
 }
 
 .message.outgoing {
@@ -159,12 +177,31 @@ small {
 .chat-bubble.incoming {
   border-radius: 1rem 1rem 0.2rem 1rem;
   background-color: var(--accent);
+}
+
+.chat-bubble.incoming p {
   color: var(--text);
 }
 
 .chat-bubble.outgoing {
   border-radius: 1rem 1rem 1rem 0.2rem;
-  background-color: antiquewhite;
+  background-color: var(--secondary);
+}
+
+.chat-bubble.outgoing p {
+  color: var(--text);
+}
+
+.typing-indicator {
+  width: 5rem;
+  height: 2.5rem;
+  background-image: url(assets/animations/typing-indicator.gif);
+  background-size: 4rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--secondary);
+  border-radius: 1rem 1rem 1rem 0.2rem;
+  margin-bottom: 0.4rem;
 }
 
 .chat-bubble p {
@@ -175,20 +212,20 @@ small {
 
 .more-info {
   appearance: none;
-  background-color: transparent;
+  background-color: var(--background);
   border: 2px solid var(--background);
   border-radius: 0.6rem;
-  color: #3b3b3b;
+  color: var(--text);
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 600;
   margin-top: 0.2rem;
   outline: none;
   padding: 0.25rem 0.5rem;
   text-align: center;
   text-decoration: none;
-  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 200ms cubic-bezier(0.23, 1, 0.32, 1);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -201,7 +238,7 @@ small {
 
 .more-info:hover {
   color: #fff;
-  background-color: var(--primary);
+  background-color: var(--accent);
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-1.5px);
 }
@@ -227,20 +264,23 @@ small {
   border: none;
   outline: none;
   padding: 0.6rem 1rem;
-  background-color: #d7d9d7;
+  background-color: var(--secondary);
   scrollbar-width: none;
   font-size: 0.875rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text);
 }
 
 .send-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.25rem;
-  width: 2.25rem;
-  background-color: #d7d9d7;
   border-radius: 50%;
   border: none;
+  background-image: url(assets/icons/send.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: var(--secondary);
 }
 
 .send-text.enabled {
@@ -257,20 +297,27 @@ small {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 50%;
   background-color: var(--accent);
-  padding: 1.25rem;
   cursor: pointer;
-  transition: box-shadow 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  background-image: url(assets/icons/chat_bubble.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 2.6rem;
+  width: 4.5rem;
+  height: 4.5rem;
 }
 
 .toggle-bot:hover {
   box-shadow: 0 0 0.75rem var(--accent);
 }
 
-.toggle-bot {
-  outline: 0;
+.close-bot {
+  background-image: url(assets/icons/close.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 2.6rem;
+  width: 4.5rem;
+  height: 4.5rem;
 }
