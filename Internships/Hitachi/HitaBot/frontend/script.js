@@ -1,19 +1,27 @@
 const chatBot = document.getElementById("chatbot-frame");
-const botToggle = document.getElementById("toggle-bot");
+const botOpen = document.getElementById("open-bot");
+const botClose = document.getElementById("close-bot");
 const userInput = document.getElementById("user-input");
 const sendButton = document.getElementById("send-text");
 const chatBox = document.getElementById("chatbox");
 const rasaURL = "http://localhost:5005/webhooks/rest/webhook";
 
 // Event Listeners
-botToggle.addEventListener("click", toggleChatBot);
+botOpen.addEventListener("click", openChatBot);
+botClose.addEventListener("click", closeChatBot);
 userInput.addEventListener("input", toggleSendButton);
 sendButton.addEventListener("click", handleSubmit);
 
-// Show and Hide Chat Bot
-function toggleChatBot() {
-  chatBot.classList.toggle("show-bot");
-  botToggle.classList.toggle("close-bot");
+// Show Chat Bot
+function openChatBot() {
+  chatBot.classList.add("show-frame");
+  botOpen.classList.add("hide-open-bot");
+}
+
+// Hide Chat Bot
+function closeChatBot() {
+  chatBot.classList.remove("show-frame");
+  botOpen.classList.remove("hide-open-bot");
 }
 
 // Change Colour and Disable Send Button if No Input is Provided

@@ -63,31 +63,28 @@ small {
   flex-direction: column;
   justify-content: center;
   position: fixed;
-  bottom: 6rem;
-  right: 6rem;
+  bottom: 1.5rem;
+  right: -30rem;
   width: 23rem;
-  height: 37rem;
+  height: 40rem;
   border-radius: 1.25rem;
   overflow: hidden;
-  transition: opacity 0.3s;
-  visibility: hidden;
-  opacity: 0;
+  transition: right 0.3s;
   background: rgba(26, 26, 26, 0.75);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
-.chatbot-frame.show-bot {
-  visibility: visible;
-  opacity: 1;
+.show-frame {
+  right: 1.5rem;
 }
 
 .chatbot-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
+  padding-inline: 1.5rem;
   height: 12%;
   background-color: var(--accent);
   border-radius: 1.25rem 1.25rem 0 0;
@@ -97,7 +94,6 @@ small {
 .online-icon {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .online-icon img {
@@ -107,6 +103,16 @@ small {
 .chatbot-header p {
   font-size: small;
   color: var(--text);
+}
+
+.close-bot {
+  background-image: url(assets/icons/close.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
 }
 
 .chatbot-chat {
@@ -133,7 +139,7 @@ small {
   background-image: url(assets/icons/robot.png);
   width: 1.5rem;
   height: 1.5rem;
-  background-size: 1.4rem;
+  background-size: 1.5rem;
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--accent);
@@ -293,31 +299,40 @@ small {
   box-shadow: 0 0 0.75rem var(--accent);
 }
 
-.toggle-bot {
+.open-bot {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 1.5rem;
+  right: 1.5rem;
   border-radius: 50%;
   background-color: var(--accent);
   cursor: pointer;
-  transition: all 0.25s ease-in-out;
+  transition: box-shadow 0.25s ease-in-out;
+  transition: bottom 0.25s;
   background-image: url(assets/icons/chat_bubble.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 2.6rem;
+  background-size: 2.5rem;
   width: 4.5rem;
   height: 4.5rem;
 }
 
-.toggle-bot:hover {
+.open-bot:hover {
   box-shadow: 0 0 0.75rem var(--accent);
 }
 
-.close-bot {
-  background-image: url(assets/icons/close.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 2.6rem;
-  width: 4.5rem;
-  height: 4.5rem;
+.hide-open-bot {
+  bottom: -8rem;
+}
+
+@media (max-width: 430px) {
+  .chatbot-frame {
+    bottom: 0rem;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0rem;
+  }
+
+  .show-frame {
+    right: 0rem;
+  }
 }
