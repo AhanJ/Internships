@@ -21,40 +21,72 @@ userInput.addEventListener("input", () => {
   }
 });
 
-// Add Text to Chat on Clicking Send
-sendButton.addEventListener("click", () => {
+function handleSubmit() {
+  let senderInfo = document.createElement("div");
+  senderInfo.classList.add("sender", "user");
   let p = document.createElement("p");
+  p.innerHTML = "You";
+  senderInfo.appendChild(p);
+  chatBox.appendChild(senderInfo);
+
+  p = document.createElement("p");
   const userMsg = userInput.value;
   p.innerHTML = userMsg;
 
-  let li = document.createElement("li");
-  li.appendChild(p);
-  li.classList.add("chat", "incoming");
-  chatBox.appendChild(li);
+  let chatBubble = document.createElement("div");
+  chatBubble.classList.add("chat-bubble", "incoming");
+  chatBubble.appendChild(p);
+
+  let messageDiv = document.createElement("div");
+  messageDiv.classList.add("message", "incoming");
+
+  messageDiv.appendChild(chatBubble);
+  chatBox.appendChild(messageDiv);
 
   userInput.value = "";
   sendButton.classList.remove("enabled");
   sendButton.disabled = true;
 
   processResponse(userMsg);
+}
+
+// Add Text to Chat on Clicking Send
+sendButton.addEventListener("click", () => {
+  handleSubmit();
 });
 
+// Function to Process User Message and Get Bot Reply
 async function processResponse(userMsg) {
   const botReply = await processInput(userMsg);
-  console.log(botReply);
 
-  let li = document.createElement("li");
+  let senderInfo = document.createElement("div");
+  senderInfo.classList.add("sender", "bot");
+
+  let botIcon = document.createElement("div");
+  botIcon.classList.add("bot-icon");
+  senderInfo.appendChild(botIcon);
+
   let p = document.createElement("p");
-  p.innerHTML = botReply.text;
-  li.appendChild(p);
+  p.innerHTML = "HitaBot";
 
-  li.classList.add("chat", "outgoing");
-  chatBox.appendChild(li);
+  senderInfo.appendChild(p);
+  chatBox.appendChild(senderInfo);
+
+  p = document.createElement("p");
+  p.innerHTML = botReply.text;
+
+  let chatBubble = document.createElement("div");
+  chatBubble.classList.add("chat-bubble", "outgoing");
+  chatBubble.appendChild(p);
+
+  let messageDiv = document.createElement("div");
+  messageDiv.classList.add("message", "outgoing");
 
   if (botReply.buttons) {
     const buttonArray = botReply.buttons;
     buttonArray.forEach((button) => {
       const buttonElement = document.createElement("button");
+      buttonElement.classList.add("more-info");
       buttonElement.textContent = button.title;
       buttonElement.addEventListener("click", () => {
         if (button.payload.substring(0, 5) === "https") {
@@ -63,12 +95,12 @@ async function processResponse(userMsg) {
           processResponse(button.payload);
         }
       });
-      li.appendChild(buttonElement);
+      chatBubble.appendChild(buttonElement);
     });
   }
 
-  li.classList.add("chat", "outgoing");
-  chatBox.appendChild(li);
+  messageDiv.appendChild(chatBubble);
+  chatBox.appendChild(messageDiv);
 }
 
 // Function Which Sends User Input to Rasa API and Returns Bot Response
@@ -83,11 +115,8 @@ async function processInput(userMsg) {
     });
 
     const botReply = await apiResponse.json();
-    console.log(botReply[0]);
     return botReply[0];
   } catch (error) {
     console.error(error);
   }
 }
-
-function handleButtonClick(payload) {}

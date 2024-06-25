@@ -13,10 +13,10 @@
 }
 
 body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   background-image: url(assets/card-bg-flipped.jpg);
   background-size: cover;
-  font-family: "Roboto";
-  font-weight: 400;
 }
 
 h1,
@@ -65,18 +65,18 @@ small {
   position: fixed;
   bottom: 6rem;
   right: 6rem;
-  width: 20rem;
-  height: 30rem;
-  background: rgba(26, 26, 26, 0.6);
+  width: 23rem;
+  height: 37rem;
+  background: rgba(167, 167, 167, 0.82);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10.3px);
-  -webkit-backdrop-filter: blur(10.3px);
+  backdrop-filter: blur(5.6px);
+  -webkit-backdrop-filter: blur(5.6px);
   border-radius: 1.25rem;
   overflow: hidden;
   padding-bottom: 0.4rem;
   transition: opacity 0.4s;
-  visibility: hidden;
-  opacity: 0;
+  visibility: visible;
+  opacity: 1;
 }
 
 .chatbot-frame.show-bot {
@@ -91,46 +91,124 @@ small {
   height: 10%;
   background-color: var(--accent);
   border-radius: 1.25rem 1.25rem 0 0;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.4);
 }
 
 .chatbot-chat {
   height: 80%;
-  padding: 1rem;
-  overflow: scroll;
-  overflow-x: hidden;
+  padding: 1.5rem;
+  overflow-y: auto;
+  /* scrollbar-gutter: stable both-edges; */
+  scrollbar-color: gray transparent;
 }
 
-.chat {
+.sender {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+  column-gap: 0.25rem;
+  font-weight: bold;
+}
+
+.bot-icon {
+  background-image: url(assets/icons/robot-3-fill.png);
+  width: 1.15rem;
+  height: 1.15rem;
+  background-size: 0.8rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #b1000e;
+  border-radius: 50%;
+}
+
+.sender.bot {
+  justify-content: start;
+  padding-left: 0.5rem;
+}
+
+.sender.user {
+  justify-content: end;
+  padding-right: 0.5rem;
+}
+
+.message {
   display: flex;
   align-items: center;
   margin-bottom: 0.75rem;
+}
+
+.message.outgoing {
+  justify-content: start;
+}
+
+.message.incoming {
+  justify-content: end;
+}
+
+.chat-bubble {
+  display: flex;
+  align-items: center;
   flex-wrap: wrap;
+  column-gap: 0.15rem;
+  padding: 0.7rem;
+  max-width: 85%;
+  font-weight: 500;
 }
 
-.outgoing {
-  display: flex;
-  align-items: center;
-  background-color: var(--secondary);
-  border-radius: 1.25rem 1.25rem 1.25rem 0;
-  font-size: 0.85rem;
-  padding: 0.1rem;
-}
-
-.incoming {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.chat p {
-  padding: 0.5rem 0.75rem;
-}
-
-.incoming p {
+.chat-bubble.incoming {
+  border-radius: 1rem 1rem 0.2rem 1rem;
   background-color: var(--accent);
-  color: var(--secondary);
-  border-radius: 1.25rem 1.25rem 0 1.25rem;
-  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.chat-bubble.outgoing {
+  border-radius: 1rem 1rem 1rem 0.2rem;
+  background-color: antiquewhite;
+}
+
+.chat-bubble p {
+  font-size: 0.875rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.25rem;
+}
+
+.more-info {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid var(--background);
+  border-radius: 0.6rem;
+  color: #3b3b3b;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 0.2rem;
+  outline: none;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+.more-info:disabled {
+  pointer-events: none;
+}
+
+.more-info:hover {
+  color: #fff;
+  background-color: var(--primary);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-1.5px);
+}
+
+.more-info:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
 
 .chatbot-input {
@@ -143,13 +221,15 @@ small {
 
 .user-input {
   width: 80%;
-  height: 75%;
+  height: 2.25rem;
   resize: none;
   border-radius: 1.25rem;
   border: none;
   outline: none;
   padding: 0.6rem 1rem;
   background-color: #d7d9d7;
+  scrollbar-width: none;
+  font-size: 0.875rem;
 }
 
 .send-text {
@@ -193,45 +273,4 @@ small {
 
 .toggle-bot {
   outline: 0;
-}
-
-button {
-  appearance: none;
-  background-color: transparent;
-  border: 2px solid #1a1a1a;
-  border-radius: 15px;
-  box-sizing: border-box;
-  color: #3b3b3b;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
-  font-weight: 600;
-  line-height: normal;
-  margin: 0;
-  min-height: 60px;
-  min-width: 0;
-  outline: none;
-  padding: 16px 24px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: 100%;
-  will-change: transform;
-}
-
-.button-28:hover {
-  color: #fff;
-  background-color: #1a1a1a;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  transform: translateY(-2px);
-}
-
-.button-28:active {
-  box-shadow: none;
-  transform: translateY(0);
 }

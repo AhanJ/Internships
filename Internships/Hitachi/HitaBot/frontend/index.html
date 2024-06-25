@@ -7,19 +7,24 @@
     <link rel="stylesheet" href="styles.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
     </style>
   </head>
   <body>
     <div class="chatbot-frame" id="chatbot-frame">
-      <div class="chatbot-header"><h5>Chatbot</h5></div>
-      <div class="chatbot-chat">
-        <ul class="chatbox" id="chatbox">
-          <li class="chat outgoing">
-            <!-- <img src="assets/icons/robot-3-fill.png" alt="bot-icon" /> -->
-            <p>Hello there, how may I assist you today?</p>
-          </li>
-        </ul>
+      <div class="chatbot-header"><h5>HitaBot</h5></div>
+      <div class="chatbot-chat" id="chatbox">
+        <div class="sender bot">
+          <div class="bot-icon"></div>
+          <p>HitaBot</p>
+        </div>
+        <div class="message outgoing">
+          <div class="chat-bubble outgoing">
+            <p>Hey, how may I help you?</p>
+          </div>
+        </div>
       </div>
+
       <div class="chatbot-input">
         <textarea
           class="user-input"
@@ -28,9 +33,6 @@
           autofocus
           placeholder="Type your message..."
         ></textarea>
-        <!-- <div class="send-text" id="send-text">
-          <img src="assets/icons/arrow-up-line.png" alt="send-icon" />
-        </div> -->
         <button class="send-text" id="send-text" disabled>
           <img src="assets/icons/arrow-up-line.png" alt="send-icon" />
         </button>
