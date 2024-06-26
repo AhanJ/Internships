@@ -60,3 +60,8 @@ rules:
     steps:
       - intent: contact_us
       - action: utter_contact_us
+
+  - rule: Ask the user to rephrase in case of low NLU confidence
+    steps:
+      - intent: nlu_fallback
+      - action: utter_please_rephrase

@@ -149,6 +149,12 @@ nlu:
     examples: |
       - What is device as a service?
       - Tell me about your end to end lifecycle services for devices.
+      - device as a service
+      - daas
+      - DAAS
+      - D-A-A-S
+      - d-a-a-s
+      - device service
 
   - intent: aws_overview
     examples: |
@@ -164,6 +170,11 @@ nlu:
       - aws services overview
       - aws overview
       - amazon web services
+      - amazon web services overview
+      - aws services
+      - aws
+      - amazon
+      - AWS
 
   - intent: aws_services/storage_services
     examples: |
@@ -220,6 +231,12 @@ nlu:
       - managed database service
       - managed db
       - cloud db
+      - cloud database
+      - rds
+      - rdbms
+      - relational database
+      - data base
+      - managed database
 
   - intent: aws_services/next_gen_managed_services
     examples: |
@@ -286,7 +303,7 @@ nlu:
       - Can you explain what AWS Config is and how it works?
       - What are the key features and benefits of using AWS Config?
       - How does AWS Config help in monitoring and managing AWS resources?
-      - How does AWS Config integrate with other AWS services for comprehensive resource management?
+      - How does AWS Config integrate
       - aws config
       - config management
       - aws configuration management
@@ -325,3 +342,5 @@ nlu:
       - customer support
       - customer service
       - support
+      - help
+      - need help

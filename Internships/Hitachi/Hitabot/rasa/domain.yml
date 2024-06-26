@@ -19,12 +19,41 @@ intents:
 responses:
   utter_greet:
     - text: "Hey! How are you?"
+    - text: "Hello there! How can I assist you today?"
+    - text: "Hi! How can I help you today?"
+    - text: "Good day! How may I assist you?"
+    - text: "Hey! Need any help from me?"
+    - text: "Welcome! How can I assist you right now?"
 
   utter_goodbye:
     - text: "Bye"
+    - text: "Goodbye! Have a great day!"
+    - text: "It was nice chatting with you! Take care!"
+    - text: "Until next time! Have a wonderful day!"
+    - text: "Thanks for chatting with me! See you soon!"
+    - text: "Goodbye! Let me know if you need anything else!"
 
   utter_iamabot:
-    - text: "I am a bot, powered by Rasa."
+    - text: "Hello! You're chatting with HitaBot. How can I assist you today?"
+    - text: "Hi there! I'm HitaBot. How can I help you?"
+    - text: "Hey, it's HitaBot here! What can I do for you?"
+    - text: "Greetings! I'm HitaBot, your virtual assistant. How may I assist you?"
+
+  utter_please_rephrase:
+    - text: "I'm not sure how to help with that. Please rephrase your question or contact us directly for assistance."
+      buttons:
+        - title: "Contact Us"
+          payload: "https://hitachi-systems.co.in/contact.php"
+
+    - text: "I'm having trouble understanding. Could you clarify or reach out to us for personalized help?"
+      buttons:
+        - title: "Contact Us"
+          payload: "https://hitachi-systems.co.in/contact.php"
+
+    - text: "I'm not sure what you're asking. Please try a different question or contact our support team for more information."
+      buttons:
+        - title: "Contact Us"
+          payload: "https://hitachi-systems.co.in/contact.php"
 
   utter_company_info:
     - text: "At Hitachi Systems India, we use technology to fuel business growth and enhance social infrastructure. With decades of experience in operational technology and information technology, Hitachi is a pioneer in developing advanced solutions."
@@ -64,7 +93,7 @@ responses:
           payload: "digital_workplace_solutions"
         - title: "Security Solutions"
           payload: "security_solutions"
-        - title: "Automations & Orchestration Solutions"
+        - title: "Automations Solutions"
           payload: "automation_orchestration_solutions"
         - title: "Cloud and Data Centre Solutions"
           payload: "cloud_data_centre_solutions"
@@ -89,7 +118,7 @@ responses:
           payload: "digital_workplace_solutions"
         - title: "Security Solutions"
           payload: "security_solutions"
-        - title: "Automations & Orchestration Solutions"
+        - title: "Automations Solutions"
           payload: "automation_orchestration_solutions"
         - title: "Cloud and Data Centre Solutions"
           payload: "cloud_data_centre_solutions"
@@ -114,7 +143,7 @@ responses:
           payload: "digital_workplace_solutions"
         - title: "Security Solutions"
           payload: "security_solutions"
-        - title: "Automations & Orchestration Solutions"
+        - title: "Automations Solutions"
           payload: "automation_orchestration_solutions"
         - title: "Cloud and Data Centre Solutions"
           payload: "cloud_data_centre_solutions"
@@ -164,7 +193,7 @@ responses:
           payload: "https://hitachi-systems.co.in/services.php#infrastructure_managed_services"
 
   utter_company_info_services/data_center_services:
-    - text: "Our offer end-to-end data center capabilities to meet 24/7 demands. From design and build to optimization and modernization, we ensure cost-effective and future-proof solutions for your critical IT assets."
+    - text: "We offer end-to-end data center capabilities to meet 24/7 demands. From design and build to optimization and modernization, we ensure cost-effective and future-proof solutions for your critical IT assets."
       buttons:
         - title: "Learn More"
           payload: "https://hitachi-systems.co.in/services.php#data_center"
@@ -214,7 +243,7 @@ responses:
           payload: "systems_manager"
         - title: "API Gateway"
           payload: "api_gateway"
-        - title: "Config"
+        - title: "AWS Config"
           payload: "config"
         - title: "Managed Control Tower"
           payload: "managed_control_tower"
@@ -230,7 +259,7 @@ responses:
           payload: "https://hitachi-systems.co.in/aws-storage.php"
 
   utter_aws_services/ec2_windows_services:
-    - text: "With our years of experience in Microsoft services and solutions. We Migrate and manage your Microsoft workload to the AWS cloud with a focus on security and regulatory compliance. HSI Solution architects can assist you in reviewing and designing your solution to increase efficiency, scalability, and minimize costs."
+    - text: "We Migrate and manage your Microsoft workload to the AWS cloud with a focus on security and regulatory compliance. Our solution architects can assist you in reviewing and designing your solution to increase efficiency, scalability, and minimize costs."
       buttons:
         - title: "Learn More"
           payload: "https://hitachi-systems.co.in/e2c-windows-services.php"
@@ -278,7 +307,7 @@ responses:
           payload: "https://hitachi-systems.co.in/aws-content-delivery-solution.php"
 
   utter_aws_services/systems_manager:
-    - text: "Hitachi Systems India offers comprehensive security and governance solutions, providing visibility across various standards and frameworks for your cloud journey. We leverage AWS Systems Manager to drive efficient and scalable operations in your AWS environment, ensuring security and control."
+    - text: "We offer comprehensive security and governance solutions, providing visibility across various standards and frameworks for your cloud journey. We leverage AWS Systems Manager to drive efficient and scalable operations in your AWS environment, ensuring security and control."
       buttons:
         - title: "Learn More"
           payload: "https://hitachi-systems.co.in/aws-system-manager.php"
@@ -290,7 +319,7 @@ responses:
           payload: "https://hitachi-systems.co.in/aws-api-gateway.php"
 
   utter_aws_services/config:
-    - text: "Our AWS Config solutions are tailored to align with your unique objectives, compliance, and security needs, backed by a proven track record. HSI's commitment to excellence ensures your AWS Config evolves with your business, providing ongoing value and support."
+    - text: "Our AWS Config solutions are tailored to align with your unique objectives, compliance, and security needs, backed by a proven track record. Our commitment to excellence ensures your AWS Config evolves with your business, providing ongoing value and support."
       buttons:
         - title: "Learn More"
           payload: "https://hitachi-systems.co.in/aws-config.php"
@@ -313,9 +342,21 @@ responses:
 
   utter_contact_us:
     - text: "Got questions? Contact us for quick assistance!"
+      buttons:
+        - title: "Contact Us"
+          payload: "https://hitachi-systems.co.in/contact.php"
     - text: "Need help? We're here for you! Get in touch now."
+      buttons:
+        - title: "Contact Us"
+          payload: "https://hitachi-systems.co.in/contact.php"
     - text: "Have a query? Contact Us by clicking below."
+      buttons:
+        - title: "Contact Us"
+          payload: "https://hitachi-systems.co.in/contact.php"
     - text: "Looking for support? Contact our team anytime!"
+      buttons:
+        - title: "Contact Us"
+          payload: "https://hitachi-systems.co.in/contact.php"
     - text: "Want to connect? Reach out and we'll assist you promptly!"
       buttons:
         - title: "Contact Us"

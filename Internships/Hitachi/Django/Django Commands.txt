@@ -1,0 +1,17 @@
+Start Virtual Environment:
+pipenv shell
+
+Create Virtual Environment:
+pipenv install
+
+Create Virtual Environment with Specific Python Version:
+pipenv install --python <version>
+
+View Installed Python Versions:
+py -0
+
+Create App:
+manage.py startapp <app name>
+
+Start Bot:
+rasa run --enable-api --cors "*"

@@ -10,6 +10,7 @@ const rasaURL = "http://localhost:5005/webhooks/rest/webhook";
 botOpen.addEventListener("click", openChatBot);
 botClose.addEventListener("click", closeChatBot);
 userInput.addEventListener("input", toggleSendButton);
+userInput.addEventListener("keyup", handleKeySubmit);
 sendButton.addEventListener("click", handleSubmit);
 
 // Show Chat Bot
@@ -35,27 +36,39 @@ function toggleSendButton() {
   }
 }
 
+// Press Enter to Send Message
+function handleKeySubmit(event) {
+  if (event.key === "Enter") {
+    handleSubmit();
+  }
+}
+
 // Resets Input and Calls addUserMessage to Add User Input to Chat
 // Calls getBotReply and Passes User Input
 function handleSubmit() {
-  const userMessage = userInput.value;
+  if (userInput.value.trim() !== "") {
+    const userMessage = userInput.value;
 
-  userInput.value = "";
-  sendButton.classList.remove("enabled");
-  sendButton.disabled = true;
+    userInput.value = "";
+    sendButton.classList.remove("enabled");
+    sendButton.disabled = true;
 
-  addUserMessage(userMessage);
-  getBotReply(userMessage);
+    addUserMessage(userMessage);
+    getBotReply(userMessage);
+  }
 }
 
 // Add User Message to Chat
 function addUserMessage(userMessage) {
   addMessageHeader("user");
   createUserChatBubble(userMessage);
+  scrollToBottom();
 }
 
 // Take User Message and Calls addBotReply to Start Process of Adding Bot Reply to Chat
 async function getBotReply(userMessage) {
+  disableInput();
+
   try {
     const apiResponse = await fetch(rasaURL, {
       method: "POST",
@@ -79,14 +92,12 @@ function addBotReply(botReply) {
     addMessageHeader("bot");
   }
   // Displays a Typing Indicator for 1500ms
-
-  disableInput();
   handleTypingIndicator();
   setTimeout(() => {
     handleTypingIndicator();
     createBotChatBubble(botReply);
-
     enableInput();
+    scrollToBottom();
   }, 1000);
 }
 
@@ -147,7 +158,6 @@ function handleClick(payload) {
   if (payload.substring(0, 5) === "https") {
     window.open(payload, "_blank");
   } else {
-    // addUserMessage(payload);
     getBotReply(payload);
   }
 }
@@ -182,7 +192,9 @@ function handleTypingIndicator() {
   }
 }
 
+// Disable Button Press and Input
 function disableInput() {
+  userInput.disabled = true;
   userInput.classList.add("disable-input");
   const chatBubbles = document.querySelectorAll(".chat-bubble");
   chatBubbles.forEach((chatBubble) => {
@@ -190,10 +202,17 @@ function disableInput() {
   });
 }
 
+// Enable Button Press and Input
 function enableInput() {
+  userInput.disabled = false;
   userInput.classList.remove("disable-input");
+  userInput.focus();
   const chatBubbles = document.querySelectorAll(".chat-bubble");
   chatBubbles.forEach((chatBubble) => {
     chatBubble.classList.remove("disable-bubble");
   });
+}
+
+function scrollToBottom() {
+  chatBox.scrollTop = chatBox.scrollHeight - chatBox.clientHeight;
 }
