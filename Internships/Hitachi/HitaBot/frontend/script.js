@@ -89,10 +89,20 @@ async function getBotReply(userMessage) {
         ],
         text: "I'm having trouble understanding. Could you clarify or reach out to us for personalized help?",
       };
+      addBotReply(botReply[0]);
     }
-    addBotReply(botReply[0]);
   } catch (error) {
     console.error(error);
+    const botReply = {
+      buttons: [
+        {
+          title: "Contact Us",
+          payload: "https://hitachi-systems.co.in/contact.php",
+        },
+      ],
+      text: "I'm having trouble connecting to our servers. Reach out to us for personalized help?",
+    };
+    addBotReply(botReply);
   }
 }
 
