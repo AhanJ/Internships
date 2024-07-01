@@ -79,6 +79,17 @@ async function getBotReply(userMessage) {
     });
 
     const botReply = await apiResponse.json();
+    if (!botReply[0]) {
+      botReply[0] = {
+        buttons: [
+          {
+            title: "Contact Us",
+            payload: "https://hitachi-systems.co.in/contact.php",
+          },
+        ],
+        text: "I'm having trouble understanding. Could you clarify or reach out to us for personalized help?",
+      };
+    }
     addBotReply(botReply[0]);
   } catch (error) {
     console.error(error);
