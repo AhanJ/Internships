@@ -92,6 +92,7 @@ async function getBotReply(userMessage) {
       addBotReply(botReply[0]);
     }
   } catch (error) {
+    // Fallback In Case of No Server Connectivity
     console.error(error);
     const botReply = {
       buttons: [
@@ -100,7 +101,7 @@ async function getBotReply(userMessage) {
           payload: "https://hitachi-systems.co.in/contact.php",
         },
       ],
-      text: "I'm having trouble connecting to our servers. Reach out to us for personalized help?",
+      text: "I'm having trouble connecting to our servers. Reach out to us for personalized help.",
     };
     addBotReply(botReply);
   }
