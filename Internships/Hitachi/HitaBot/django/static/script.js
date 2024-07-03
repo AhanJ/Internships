@@ -118,6 +118,7 @@ function addBotReply(botReply) {
   }
   // Displays a Typing Indicator for 1500ms
   handleTypingIndicator();
+  scrollToBottom();
   setTimeout(() => {
     handleTypingIndicator();
     createBotChatBubble(botReply);
