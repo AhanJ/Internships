@@ -18,7 +18,6 @@ intents:
 
 responses:
   utter_greet:
-    - text: "Hey! How are you?"
     - text: "Hello there! How can I assist you today?"
     - text: "Hi! How can I help you today?"
     - text: "Good day! How may I assist you?"
@@ -26,7 +25,6 @@ responses:
     - text: "Welcome! How can I assist you right now?"
 
   utter_goodbye:
-    - text: "Bye"
     - text: "Goodbye! Have a great day!"
     - text: "It was nice chatting with you! Take care!"
     - text: "Until next time! Have a wonderful day!"
