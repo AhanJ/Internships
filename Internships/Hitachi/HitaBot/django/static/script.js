@@ -79,6 +79,7 @@ async function getBotReply(userMessage) {
     });
 
     const botReply = await apiResponse.json();
+    // If Empty/Null Reply
     if (!botReply[0]) {
       botReply[0] = {
         buttons: [
@@ -89,6 +90,8 @@ async function getBotReply(userMessage) {
         ],
         text: "I'm having trouble understanding. Could you clarify or reach out to us for personalized help?",
       };
+      addBotReply(botReply[0]);
+    } else {
       addBotReply(botReply[0]);
     }
   } catch (error) {
