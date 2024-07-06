@@ -91,6 +91,9 @@ nlu:
       - what are the services you have?
       - services offered
       - services
+      - tell me about your services
+      - tell me about your solutions
+      - tell me about your offerrings
 
   - intent: company_info_solutions/digital_workplace_solutions
     examples: |
