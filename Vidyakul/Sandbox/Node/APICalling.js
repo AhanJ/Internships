@@ -32,5 +32,5 @@ const getFact3 = async () => {
 getFact3();
 
 // here the order of facts is random since we are using asynchronous functions
-// since all such functions work indepnedent of each other
+// since all such functions work independent of each other
 // their results are used as and when available
