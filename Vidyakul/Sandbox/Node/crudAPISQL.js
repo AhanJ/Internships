@@ -89,7 +89,6 @@ app.post("/crud/details", (req, res) => {
 });
 
 // update (PUT) in such a way that only one key is sent instead of entire json object - DONE
-
 // fix possible SQL injection
 // try not splitting into seprate statements as separate statements increase overhead
 
